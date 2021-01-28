@@ -89,7 +89,6 @@ header #logotipo {
     height: 70px;
     background-color: rgb(15, 212, 238);
     z-index: 2;
-    
 }
 
 .temas h1 {
@@ -167,6 +166,8 @@ a{
     justify-content: space-between;
     box-sizing: border-box;
     margin: 20px 10px;
+    position: relative;
+    right: 19px;
 }
 
 .figure {
@@ -210,4 +211,16 @@ a{
         font-size: 16px;
         width: 250px;
     }
+}
+
+.promocao {
+    width: 100%;
+    height: 70px;
+    background-color: rgb(15, 212, 238);
+    z-index: 2;
+}
+
+.promocao h1 {
+    color: black;
+    text-align: center;
 }
