@@ -1,6 +1,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    background-color: gray;
 }
 
 header {
@@ -84,74 +85,23 @@ header #logotipo {
     opacity: 0.5;
 }
 
-.temas {
+.temas, .promocao, .vistos {
     width: 100%;
     height: 70px;
     background-color: rgb(15, 212, 238);
-    z-index: 2;
-}
-
-.temas h1 {
+    text-align: center;
     color: white;
-    text-align: center;
-    position: relative;
-    top: 5px;
 }
 
-/*pagina do produto*/
 
-#destaque-produtos-container {
-    position: relative;
-}
-
-#destaque-produtos .col-imagem {
-    text-align: center;
-}
-
-#destaque-produtos .col-descricao h2 {
-    font-family: arial;
-    font-size: 20px;
-    color: #666;
-}
-
-#destaque-produtos .col-descricao h2 {
-    font-family: arial;
-    font-size: 20px;
-    color: #666;
-}
-
-.temas2 {
-    color:  rgb(15, 212, 238);
-    font-weight:bold;
-    text-align: center;
-    position: relative;
-    top: 1500px;
-    font-size:15px;
-    width: 100%;
-    border-radius: 20px;
-}
-
-#box-temas {
-    margin: 0px;
-    padding: 0px;
-}
-
-ul {
-    list-style: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-.container-temas {
-    width: 100%;
-    height: 80vh;
-    background-color:gray;
+section .container {
+    width: 107%;
+    height: 77vh;
+    background-color: gray;
     display: flex;
     justify-content: center;
-    align-items: center;
-    top: -55px;
+    position: relative;
+    top: 0px;
 }
 
 .box {
@@ -170,20 +120,15 @@ a{
     right: 19px;
 }
 
-.figure {
-    height: 350px;
+.model {
+    height: 325px;
+    max-height: 100%;
     max-width: 100%;
-    max-width: 100%;
+    position: relative;
+    top: 35px;
 }
 
-.details {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 300px;
-}
-
-.details h5 {
+section .container h1 {
     font-family: arial;
     font-weight: bold;
     color:  rgb(15, 212, 238);
@@ -197,30 +142,4 @@ a{
     transform-style: preserve-3d;
     transform: scale(1.02);
     transition: all ease 0.3s;
-}
-
-@media(max-width:720px) {
-    .box{
-        width: 94%;
-        height: 500px;
-    }
-    .model{
-        height: 250px;
-    }
-    .details p{
-        font-size: 16px;
-        width: 250px;
-    }
-}
-
-.promocao {
-    width: 100%;
-    height: 70px;
-    background-color: rgb(15, 212, 238);
-    z-index: 2;
-}
-
-.promocao h1 {
-    color: black;
-    text-align: center;
 }
