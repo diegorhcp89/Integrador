@@ -105,8 +105,10 @@ section .container {
 }
 
 .box {
-    width: 92%;
-    height: 457px;
+    width: 117%;
+    height: 450px;
+    max-height: 100%;
+    max-width: 100%;
     background-color: white;
     border-radius: 10px;
     box-shadow: 20px 10px 12px rgba (0, 0, 0, 0.5);
@@ -115,27 +117,26 @@ section .container {
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    margin: 20px 10px;
-    position: relative;
-    right: 19px;
+    margin: 14px 30px;
+    right: -1px;
 }
 
 .model {
-    height: 325px;
+    height: 310px;
     max-height: 100%;
     max-width: 100%;
     position: relative;
-    top: 35px;
+    top: 10px;
 }
 
-section .container h1 {
+/* section .container h1,{
     font-family: arial;
     font-weight: bold;
     color:  rgb(15, 212, 238);
     font-size: 50px;
     text-align: center;
     margin-top: 20px;
-}
+} */
 
 .box:hover {
     background-color: "17171d";
@@ -143,3 +144,5 @@ section .container h1 {
     transform: scale(1.02);
     transition: all ease 0.3s;
 }
+
+/* Mobile */
