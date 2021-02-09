@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  border: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -182,6 +183,7 @@ section .container {
   margin: 20px 10px;
   position: relative;
   right: -3px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .container-fluid h1 {
