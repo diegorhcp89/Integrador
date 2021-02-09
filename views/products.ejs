@@ -1,42 +1,51 @@
-<%- include('./partials/head'); %> 
-<%- include('./partials/header'); %>
+<%- include('./partials/head'); %>
+    <%- include('./partials/header'); %>
 
 
 
-<section>
+        <section>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col">
 
-            </div>
-            <div class="col">
-                <div class="home-book">
-                    <h1>Livro</h1>
-                    <h3>Autor</h3>
-                    <img src="/images/geekbook.webp" class="book">
-                </div>
-            </div>
-            <div class="col">
-                <h3>Descrição:</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat deleniti libero fuga, tenetur blanditiis, ipsam, neque voluptatem aut quis accusantium deserunt consectetur quidem! Quas veritatis itaque, facere nam saepe non!</p>
-            </div>
-            <div class="col">
-                <div class="group">
-                    <h1>Preço</h1>
-                    <h2>R$ 0,00</h2>
-                </div>
-                <div class="group">
-                    <h5>CEP</h5>
-                    <button type="button" class="btn btn-primary">Calcular Rota</button>
-                </div>
-                <div class="group">
-                    <button type="button" class="btn btn-primary">
-                        <i class="fas fa-cart-arrow-down"></i>Comprar</button>
-                </div>
-            </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="group">
+                        <div class="home-book">
+                            <img src="/images/geekbook.webp" class="book">
+                            <h1>Livro: Geek</h1>
+                            <h3>Autor: Fulano</h3>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="group">
+                            <h4>Descrição:</h4>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat deleniti libero fuga,
+                                tenetur blanditiis, ipsam, neque voluptatem aut quis accusantium deserunt consectetur
+                                quidem! Quas veritatis itaque, facere nam saepe non!</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6 col-md-3">
+                        <div class="group">
+                            <h1>Preço</h1>
+                            <h2>R$ 0,00</h2>
+                        </div>
+                        <div class="group">
+                            <div class="navbutton">
+                            <button type="button" class="btn btn-primary">Calcular Rota</button>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="navbutton">
+                            <button type="button" class="btn btn-primary">
+                                <i class="fas fa-cart-arrow-down"></i>Comprar</button>
+                            </div>
+                        </div>
+                    </div>
 
-</section>
+        </section>
 
 
 
@@ -45,6 +54,7 @@
 
 
 
-<%- include('./partials/footer'); %> 
-</body>
-</html>
+        <%- include('./partials/footer'); %>
+            </body>
+
+            </html>

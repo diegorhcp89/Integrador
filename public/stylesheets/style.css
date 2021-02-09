@@ -8,13 +8,14 @@
 body {
   padding: 0;
   font: 14px  "Open Sans", sans-serif;
+  background-color: rgb(243, 243, 243);
 }
 
 a {
   color:none;
 }
 
-h1{
+h1, h3{
   font-weight: bold;
 }
 
@@ -43,7 +44,7 @@ h1{
 .navbar-logo{
   height: 250px;
   position: absolute;
-  top: -30px;
+  top: -24px;
 }
 
 .navbar-list{
@@ -58,8 +59,6 @@ h1{
     height: 30px;
     border: none;
     border-radius: 30px 0 0 30px;
-    
-
 }
 
 .navbar-search-button{
@@ -150,7 +149,10 @@ font-size: 30px;
   background-color: rgb(15, 212, 238);
   text-align: center;
   color: white;
-  
+}
+
+.temas, .promocao, .vistos, h1 {
+  font-size: 55px;
 }
 
 
@@ -179,7 +181,20 @@ section .container {
   box-sizing: border-box;
   margin: 20px 10px;
   position: relative;
-  right: 19px;
+  right: -3px;
+}
+
+.container-fluid h1 {
+  color: rgb(13, 202, 240);
+  text-align: center;
+  font-size: 55px;
+}
+
+.container-fluid h2 {
+  color: #ECB248;
+  text-align: center;
+  font-weight: bold;
+  font-size: 55px;
 }
 
 .model {
@@ -236,7 +251,7 @@ footer {
 }
 
 .footer-sections{
-  background-color: aqua;
+  background-color:rgb(15, 212, 238);
 }
 
 .footer-icons {
@@ -255,4 +270,12 @@ footer {
   .navbar-link-logo{
     justify-content: center;
   }
+}
+
+/* footer */
+
+.text-center {
+  font-size: 22px;
+  font-family: arial;
+  font-weight: bold;
 }
