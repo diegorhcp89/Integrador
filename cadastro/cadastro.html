@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="cadastro.css">
+
+    <title> Cadastre-se ou entre!</title>
+</head>
+
+<body class="row" class="container">
+
+
+    <section class="container-md">
+
+        <div>
+            <button type="button" class="btn btn-info">Entrar</button>
+            <a href="/loguin"></a>
+        </div>
+
+        <br>
+
+        </div>
+        <h1 class="text-center" class="row">Faça seu Cadastro!</h1>
+        <form class="row g-3">
+
+            <div class="col-md-6">
+                <label for="inputEmail4" class="form-label">Email</label>
+                <input type="email" class="form-control" id="inputEmail" placeholder="Digite seu email">
+
+            </div>
+            <div class="col-md-6">
+                <label for="inputPassword4" class="form-label"> Senha </label>
+                <input type="senha" class="form-control" id="igite sua senha" placeholder="Digite sua senha">
+            </div>
+
+            <div class="col-12">
+                <label for="inputAddress" class="form-label">Endereço 1</label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Endereço principal">
+            </div>
+
+            <div class="col-12">
+                <label for="inputAddress2" class="form-label">Endereço 2</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Digite outro endereço">
+            </div>
+
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">Cidade</label>
+                <input type="text" class="form-control" id="inputCity">
+            </div>
+
+            <div class="col-md-4">
+                <label for="inputState" class="form-label">Estado</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Selecionar...</option>
+                    <option> Alagoas (AL)</option>
+                    <option> Amapá (AP)</option>
+                    <option> Amazonas (AM)</option>
+                    <option> Bahia (BA)</option>
+                    <option> Ceará (CE)</option>
+                    <option> Distrito Federal (DF))</option>
+                    <option> Espírito Santo (ES))</option>
+                    <option> Goiás (GO))</option>
+                    <option> Maranhão (MA))</option>
+                    <option> Mato Grosso (MT))</option>
+                    <option> Mato Grosso do Sul (MS))</option>
+                    <option> Minas Gerais (MG))</option>
+                    <option> Pará (PA))</option>
+                    <option> Paraíba (PB))</option>
+                    <option> Paraná (PR))</option>
+                    <option> Pernambuco (PE))</option>
+                    <option> Piauí (PI))</option>
+                    <option> Rio de Janeiro (RJ))</option>
+                    <option> Rio Grande do Norte (RN))</option>
+                    <option> Rio Grande do Sul (RS))</option>
+                    <option> Rondônia (RO))</option>
+                    <option> Roraima (RR))</option>
+                    <option> Santa Catarina (SC))</option>
+                    <option> São Paulo (SP))</option>
+                    <option> Sergipe (SE))</option>
+                    <option> Tocantins (TO))</option>
+                </select>
+            </div>
+
+            <div class="col-md-2">
+                <label for="inputZip" class="form-label" placeholder="Digite seu CEP"></label>CEP</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                        Aceita receber novidades e promoções?
+                    </label>
+                </div>
+
+            </div>
+            <div class="col-12">
+                <button type="button" class="btn btn-info">Enviar</button>
+            </div>
+
+
+
+            <%- include('./partials/head'); %>
+                <%- include('./partials/header'); %>
+                    <%- include('./partials/footer'); %>
+    </section>
+</body>
+
+</html>
