@@ -83,10 +83,38 @@ h1, h3{
 }
 
 .navbar-icons{
-  width: 80px;
+  width: 345px;
   display: flex;
   justify-content: space-between;
   margin-left: 20px;
+}
+
+.navbar-icons img{
+  width: 35px;
+}
+
+.navbar-icons-login{ 
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  text-decoration: none;
+  color: none;
+  /* border: 1px solid; */
+  color: white; 
+  
+}
+
+.navbar-icons-login:hover{
+  color: rgba(160, 153, 141, 0.897);
+
+}
+.navbar-icons-section{
+  text-decoration: none;
+  width: 100px;
+  /* border: solid; */
+  display: flex;
+  justify-content: space-around;
 }
 
 .navbar-favorite,
@@ -225,12 +253,20 @@ section .container h1 {
 
 
 footer {
-  height: 100px;
+  height: 150px;
 }
+
+.footer-sections{
+  height: 150px;
+  padding-top: 35px;
+  background-color: rgb(13, 202, 240);
+}
+
 
 .footer-payment ul{
   display: flex;
-    justify-content: center;
+  justify-content: center;
+  padding-left: 0;
 }
 
 .footer-payment li{
@@ -250,17 +286,33 @@ footer {
 
 .footer-certificates a i{
   font-size: 30px;
+}/*  */
+
+.footer-certificates img{
+  width: 40px;
 }
 
-.footer-sections{
-  background-color: rgb(13, 202, 240);
-}
 
 .footer-icons {
   display: flex;
   justify-content: space-between;
   font-size: 40px;
   width: 200px;
+}
+
+.footer-social ul{
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 0;
+}
+
+.footer-social li{
+  list-style: none;
+}
+
+.footer-social img{
+  width: 40px;
+
 }
 
 @media(max-width: 991px){
@@ -410,4 +462,17 @@ label span {
 
 .medias .social-field.facebook {
   background: linear-gradient(to right, #1e3c72, #2a5298) ;
+}
+
+
+
+/* Cadastro */
+
+#create{
+  /* height: calc( 100vh - 220px); */
+  padding: 100px;
+}
+
+.create-validate{
+  margin-top: 5px;
 }
