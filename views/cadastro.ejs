@@ -8,7 +8,7 @@
       
 
       <form action="/users/save" method="POST">
-        <div class="row">
+        <div class="row create-space">
           <div class="form-group col-md-6">
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" class="form-control" placeholder="Seu nome" required>
@@ -18,54 +18,70 @@
             <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Seu sobrenome" required>
           </div>
         </div>
+
         <div class="form-group">
           <label for="email">Email</label>
           <input type="email" name="email" id="email" class="form-control" placeholder="email@email.com" required>
         </div>
-        <div class="form-group col-md-6">
-          <label for="senha">Senha</label>
-          <input type="password" name="senha" class="form-control" id="senha" placeholder="Senha">
+
+        <div class="row create-space">
+          <div class="form-group col-md-6">
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" class="form-control" id="senha" placeholder="Senha">
+          </div>
+  
+          <div class="form-group col-md-6">
+            <label for="confSenha">Confirme sua senha</label>
+            <input type="password" name="confSenha" class="form-control" id="confSenha" placeholder="Confirme senha" required>
+          </div>
+
         </div>
-        <div class="form-group col-md-6">
-          <label for="confSenha">Confirme sua senha</label>
-          <input type="password" name="confSenha" class="form-control" id="confSenha" placeholder="Confirme senha" required>
-        </div>
-        <% if(typeof validate !== "undefined"){ %>
-          <div class="alert alert-warning create-validate" role="alert">
+        
+        <% if(typeof validaSenha !== "undefined"){ %>
+          <div class="alert alert-warning create-alert" role="alert">
             Senha e Confirme senha não conferem
           </div>
         <% } %> 
-    
-        <div class="form-group">
-          <label for="inputAddress2">Address 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-        </div>
-        <div class="form-row">
+
+        <div class="row create-space">
+
           <div class="form-group col-md-6">
-            <label for="inputCity">City</label>
-            <input type="text" class="form-control" id="inputCity">
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Seu cpf" required>
+            <% if(typeof valiCpf != "undefined"){ %>
+              <div class="alert alert-danger create-alert" role="alert">
+                CPF inválido!
+              </div>
+            <% } %>
           </div>
-          <div class="form-group col-md-4">
-            <label for="inputState">State</label>
-            <select id="inputState" class="form-control">
-              <option selected>Choose...</option>
-              <option>...</option>
-            </select>
+
+          <div class="form-group col-md-6">
+            <label for="" id="create-sex-label">Sexo</label>
+            <div class="form-check form-check-inline create-sex-radio">
+              <input class="form-check-input" type="radio" name="genero" id="feminino" value="feminino">
+              <label class="form-check-label" for="feminino">Feminino</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="genero" id="masculino" value="masculino"><!-- value:option2 caso necessite mudar, esse era o valor original -->
+              <label class="form-check-label" for="masculino">Masculino</label>
+            </div>
           </div>
-          <div class="form-group col-md-2">
-            <label for="inputZip">Zip</label>
-            <input type="text" class="form-control" id="inputZip">
-          </div>
-        </div>
-        <div class="form-group">
+
+          
+        </div> 
+
+
+        <div class="form-group create-space">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="gridCheck">
-            <label class="form-check-label" for="gridCheck">
-              Check me out
+            <input class="form-check-input" type="checkbox" id="infoEmail">
+            <label class="form-check-label" for="infoEmail">
+              Deseja receber informações por e-mail?
             </label>
           </div>
         </div>
-        <button type="submit" class="btn btn-primary">Sign in</button>
+
+        <button type="submit" class="btn btn-primary">Cadastrar</button>
+
       </form>
       </section>
     </main>

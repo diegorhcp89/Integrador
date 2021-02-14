@@ -473,6 +473,18 @@ label span {
   padding: 100px;
 }
 
-.create-validate{
+.create-alert{
   margin-top: 5px;
+}
+
+#create-sex-label{
+  display: block;
+}
+
+.create-sex-radio{
+  margin-top: 5px;
+}
+
+.create-space{
+  margin-bottom: 10px;
 }

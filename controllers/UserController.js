@@ -1,5 +1,9 @@
 const express = require('express')
 const router = express.Router();
+const valida = require('gerador-validador-cpf');
+// const teste = valida.validate() 
+
+
 
 module.exports = {
   login(req,res,next){
@@ -15,8 +19,18 @@ module.exports = {
     let confSenha = req.body.confSenha;
 
     if(senha != confSenha){
-      return res.render('cadastro',{validate: false})
+      return res.render('cadastro',{validaSenha: false})
     }
+
+    let validaCpf = valida.validate(req.body.cpf);
+    console.log(validaCpf)
+
+
+    /* Verificar como melhorar isso */
+    if (validaCpf==false) {
+      res.render('cadastro',{valiCpf: false});
+    }
+
 
 
   }
