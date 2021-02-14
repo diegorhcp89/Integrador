@@ -23,7 +23,10 @@ h1, h3{
 .navbar{
   background-color: rgb(13, 202, 240);
   z-index: 2;
-  height: 70px;
+  height: 70px;position: fixed;
+  top: 0px;
+  width: 100%;
+  box-sizing: border-box;
   
 }
 
