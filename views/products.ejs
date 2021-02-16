@@ -5,55 +5,37 @@
 
         <section>
 
-            <div class="container-fluid">
-                <div class="row justify-content-md-center">
-                    <div class="col-12 col-sm-6 col-md-6">
-                        <div class="group">
-                        <div class="home-book">
-                            <img src="/images/geekbook.webp" class="book">
-                            <h1>Livro: Geek</h1>
-                            <h3>Autor: Fulano</h3>
+            <div class="row justify-content-md-center">
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-product">
+                        <div class="product-thumb">
+                            <img src="/images/geekbook.webp" alt="">
                         </div>
+                        <div class="product-title">
+                            <h3><a href="/products">Lorem ipsum</a></h3>
                         </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="col-12 col-sm-6 col-md-12">
-                            <div class="group">
-                                <h4>Descrição:</h4>
-                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat deleniti libero fuga,
-                                    tenetur blanditiis, ipsam, neque voluptatem aut quis accusantium deserunt consectetur
-                                    quidem! Quas veritatis itaque, facere nam saepe non!</p>
-                            </div>
-                        </div>
-                        <div class="col-12 col-sm-6 col-md-12">
-                            <div class="group">
-                                <h1>Preço</h1>
-                                <h2>R$ 0,00</h2>
-                            </div>
-                            <div class="group">
-                                <div class="navbutton">
-                                <button type="button" class="btn btn-primary">Calcular Rota</button>
-                                </div>
-                            </div>
-                            <div class="group">
-                                <div class="navbutton">
-                                <button type="button" class="btn btn-primary">
-                                    <i class="fas fa-cart-arrow-down"></i>Comprar</button>
-                                </div>
-                            </div>
+                        <div class="product-btns">
+                            <a href="#" class="btn-small mr-2">R$ 0.00</a>
+                            <a href="#" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
+                            <a href="#" class="btn-round"><i class="fa fa-heart"></i></a>
                         </div>
                     </div>
-
                 </div>
-            </div>
-
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-product">
+                        <h4>Descrição:</h4>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat deleniti libero fuga,
+                            tenetur blanditiis, ipsam, neque voluptatem aut quis accusantium deserunt consectetur
+                            quidem! Quas veritatis itaque, facere nam saepe non!</p>
+                        </div>
+                        <div class="single-product">
+                            <div class="navbutton">
+                                <button type="button" class="btn btn-primary">Calcular Rota</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </section>
-
-
-
-
-
-
 
 
         <%- include('./partials/footer'); %>
