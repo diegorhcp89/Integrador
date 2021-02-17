@@ -9,11 +9,11 @@
 
       <form action="/users/save" method="POST">
         <div class="row create-space">
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-6 col-sm-12">
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="nome" class="form-control" placeholder="Seu nome" required>
           </div>
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-6 col-sm-12">
             <label for="sobrenome">Sobrenome</label>
             <input type="text" name="sobrenome" id="sobrenome" class="form-control" placeholder="Seu sobrenome" required>
           </div>
@@ -25,12 +25,12 @@
         </div>
 
         <div class="row create-space">
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-6 col-sm-12">
             <label for="senha">Senha</label>
             <input type="password" name="senha" class="form-control" id="senha" placeholder="Senha">
           </div>
   
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-6 col-sm-12">
             <label for="confSenha">Confirme sua senha</label>
             <input type="password" name="confSenha" class="form-control" id="confSenha" placeholder="Confirme senha" required>
           </div>
@@ -45,9 +45,9 @@
 
         <div class="row create-space">
 
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-6 col-sm-12">
             <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Seu cpf" required>
+            <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Seu cpf" onkeypress="$(this).mask('000.000.000-00');" required>
             <% if(typeof valiCpf != "undefined"){ %>
               <div class="alert alert-danger create-alert" role="alert">
                 CPF inválido!
@@ -55,7 +55,7 @@
             <% } %>
           </div>
 
-          <div class="form-group col-md-6">
+          <div class="form-group col-md-6 col-sm-12">
             <label for="" id="create-sex-label">Sexo</label>
             <div class="form-check form-check-inline create-sex-radio">
               <input class="form-check-input" type="radio" name="genero" id="feminino" value="feminino">
@@ -73,7 +73,7 @@
 
         <div class="form-group create-space">
           <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="infoEmail">
+            <input class="form-check-input" name="infoEmail" value="informacoes" type="checkbox" id="infoEmail">
             <label class="form-check-label" for="infoEmail">
               Deseja receber informações por e-mail?
             </label>

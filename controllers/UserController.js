@@ -31,7 +31,7 @@ module.exports = {
       res.render('cadastro',{valiCpf: false});
     }
 
-
+    console.log(req.body)
 
   }
 }

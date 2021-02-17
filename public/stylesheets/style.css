@@ -132,7 +132,7 @@ font-size: 30px;
 }
 
 .navbar-favorite:hover{
-  color: #fe2e2ec5;
+  color: #7289ab;
 }
 
 
@@ -668,4 +668,13 @@ label span {
   display: inline-block;
   transform: scale(0.98);
   
+}
+
+/* Favorites */
+.fa-trash{
+  color: #FE2E2E;
+}
+
+.fa-trash:hover{
+  color: #7289ab;
 }

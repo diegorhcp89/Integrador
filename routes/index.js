@@ -18,6 +18,10 @@ router.get('/section',function(req,res,next){
   res.render('section')
 })
 
+router.get('/favorites',function(req,res,next){
+  res.render('favorites')
+})
+
 /* coloquei em users.js */
 
 module.exports = router;
