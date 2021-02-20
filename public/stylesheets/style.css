@@ -24,13 +24,17 @@ h1, h3{
 .navbar{
   background-color: rgb(13, 202, 240);
   z-index: 2;
-  height: 70px;
+  /* height: 70px; *//*anula o funcionamento do toggle*/
   /* position: fixed;
   top: 0px;
   width: 100%;
   box-sizing: border-box; */
   
 }
+
+.show{
+  padding-top: 40px;
+}/* para quando o toggle e acionado */
 
 .navbar-light .navbar-nav .nav-link {
   color: rgb(255,255,255);
@@ -40,11 +44,6 @@ h1, h3{
 
 .navbar-light .navbar-nav .nav-link:hover {
   color: #47AC96;
-}
-
-
-.navbar-link{
-  /* margin-right: 840px; */
 }
 
 .navbar-logo{
@@ -58,6 +57,10 @@ h1, h3{
   justify-content: space-around;
   /* color: white; */
   font-weight: bold;
+}
+
+.navbar-search{
+  margin: inherit;
 }
 
 .navbar-search-input{
