@@ -681,3 +681,32 @@ label span {
 .fa-trash:hover{
   color: #7289ab;
 }
+
+/*Pagamentos*/
+.container_1 {
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+ 
+}
+
+.lh-condensed { line-height: 1.25; }
+
+.order-md-2 {
+  order: 2!important;
+  padding-top: 130px;
+   
+}
+
+.pagamento{
+order:3;
+align-self: center;
+margin: 50px;
+}
+
+.justify-content-start {
+  justify-content: flex-start!important;
+  padding-top: 90px;
+  margin:15px;
+}
