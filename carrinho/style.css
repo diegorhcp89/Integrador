@@ -1,0 +1,94 @@
+#imagemcarrocel{ width:133px;
+    left: 177px;
+
+}
+h1{
+    font-size: 20px;
+    font-family: Arial;
+    text-align: justify;
+}
+
+h2{
+    font-family: Arial;
+    font-size: 20px;
+}
+p{
+    font-size: 18px;
+    font-family: Arial;
+}
+#imagens { display: flex;
+    align-content: center;
+    align-items: center;
+    width: 120px;
+    height: 110px;
+
+}
+
+#tabelas {
+    font-family: Arial;
+    color:black
+    display: flex;
+    padding: 5px;
+    border: 5px;
+    
+}
+
+#colunas{
+    font-family: Arial;
+ align-items: center;
+ padding: 10px;
+ color:rgb(15, 212, 238);
+ font-family: arial;
+ font-size: 20 px;
+ 
+
+}
+
+#linhas{
+    align-items: center;
+  
+    margin: 15px;
+}
+
+#resumoDoPedido {
+
+    align-content: flex-end;
+    padding: 10px;
+    margin: 10px;
+    color:rgb(15, 212, 238);
+    font-family: arial;
+    font-size: 20 px;
+    font-style: oblique;
+    border-radius: 10px;
+
+}
+#Tab01{
+    
+    float:left;
+    display: flex;
+     position: initial;
+     border: 15px lavenderblush;
+     padding: 30PX;
+
+}
+
+#tabelaTotal{
+    border-top: 3px solid #000;
+
+    float:left;
+    margin-left: 15px;
+    display: flex;
+    position:relative;
+    
+   
+
+}
+
+#CompreTambem{ 
+    font-family: Arial;
+    position: relative;
+}
+
+#alinharCard{
+    text-align: center;
+}
