@@ -249,6 +249,7 @@ section .container h1 {
 
 footer {
   height: 150px;
+  color: white;
 }
 
 .footer-sections{
