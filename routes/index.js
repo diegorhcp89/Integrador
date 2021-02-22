@@ -24,4 +24,8 @@ router.get('/favorites',function(req,res,next){
 
 /* coloquei em users.js */
 
+router.get('/payment',function(req,res,next){
+  res.render('payment')
+})
+
 module.exports = router;
