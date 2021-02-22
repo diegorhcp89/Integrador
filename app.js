@@ -24,7 +24,8 @@ app.use('/products', indexRouter)
 app.use('/section', indexRouter)
 app.use('/users', usersRouter);
 app.use('/cart', indexRouter);
-app.use('/payment', indexRouter)
+app.use('/payment', indexRouter);
+app.use('/concluded', indexRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

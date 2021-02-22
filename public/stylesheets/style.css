@@ -684,6 +684,16 @@ label span {
 }
 
 /*Pagamentos*/
+
+.payment {
+  margin-top: -85px;
+  margin-bottom: 55px;
+}
+
+.shoopcart {
+ margin-top: -55px;
+}
+
 .container_1 {
   max-width: 1300px;
   display: flex;

@@ -32,4 +32,8 @@ router.get('/cart',function(req,res,next){
   res.render('cart')
 })
 
+router.get('/concluded',function(req,res,next){
+  res.render('concluded')
+})
+
 module.exports = router;
