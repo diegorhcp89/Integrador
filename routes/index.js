@@ -28,4 +28,8 @@ router.get('/payment',function(req,res,next){
   res.render('payment')
 })
 
+router.get('/cart',function(req,res,next){
+  res.render('cart')
+})
+
 module.exports = router;
