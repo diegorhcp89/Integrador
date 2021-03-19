@@ -26,7 +26,6 @@ module.exports = {
     let validaCpf = valida.validate(req.body.cpf);
     //console.log(validaCpf)
 
-
     /* Verificar como melhorar isso */
     if (validaCpf==false) {
       res.render('cadastro',{valiCpf: false});
@@ -39,18 +38,40 @@ module.exports = {
       infoEmail = "false"
     }
 
-    let user = {
-      name: req.body.name,
-      email: req.body.email,
-      password: req.body.password,
-      cpf: req.body.cpf,
-      gender: req.body.gender,
-      infoEmail
-    };
+    let user = {infoEmail, ...req.body};
 
     await User.create(user)
 
     console.log(user)
    res.render('cadastro',{added:true});
+  },
+
+  async authenticate(req,res,next){
+    let {email, password} = req.body;
+
+    let user = await User.findOne({
+      where:{email}
+    });
+
+    if(!user){
+      return res.render('login',{notFound:true});
+    }
+
+    if (!bcrypt.compareSync(password, user.password)) {
+      return res.render('login',{notFound:true});
+    }
+
+    user.password = undefined;
+
+    req.session.user = user;
+
+    console.log(user)
+    res.redirect('/')
+  },
+
+  logout(req,res,next){
+    req.session.destroy();
+
+    res.redirect('/')
   }
 }
