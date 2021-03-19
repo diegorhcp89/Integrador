@@ -6,7 +6,7 @@ const most = require('../data/most')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index',{promotions: promotions, most:most});
+  res.render('index',{promotions: promotions, most:most, user: req.session.user});
 });
 
 /* GET products page. */
