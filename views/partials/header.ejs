@@ -39,9 +39,16 @@
         <% } %>   
 
           <section class="navbar-icons-section">
-            <a href="/favorites">
+            <% if(typeof user != 'undefined') {%> 
+            <a href="/favorites/index/<%= user.id %>" >
               <i class="fas fa-heart navbar-favorite"></i>
             </a>
+         <% }else {%>
+            <a href="#">
+              <i class="fas fa-heart navbar-favorite"></i>
+            </a>
+
+        <% } %>
             <a href="/cart">
               <i class="fas fa-shopping-cart navbar-shopping-cart"></i>
             </a>
