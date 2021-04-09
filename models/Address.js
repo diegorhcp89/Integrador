@@ -46,5 +46,11 @@ module.exports = (sequelize,DataTypes)=>{
     tableName: 'addresses'
   });
 
+  Address.associate = function(models){
+    Address.belongsTo(models.User,{
+      foreignKey: 'userId', as:'user'
+    });
+  }
+
   return Address;
 };
