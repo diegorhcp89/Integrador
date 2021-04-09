@@ -11,11 +11,11 @@ router.get('/', function(req, res, next) {
 
 /* GET products page. */
 router.get('/products',function(req,res,next){
-  res.render('products')
+  res.render('products',{user: req.session.user})
 })
 
 router.get('/section',function(req,res,next){
-  res.render('section')
+  res.render('section',{user: req.session.user})
 })
 
 // router.get('/favorites',function(req,res,next){
@@ -25,15 +25,15 @@ router.get('/section',function(req,res,next){
 /* coloquei em users.js */
 
 router.get('/payment',function(req,res,next){
-  res.render('payment')
+  res.render('payment',{user: req.session.user})
 })
 
 router.get('/cart',function(req,res,next){
-  res.render('cart')
+  res.render('cart',{user: req.session.user})
 })
 
 router.get('/concluded',function(req,res,next){
-  res.render('concluded')
+  res.render('concluded',{user: req.session.user})
 })
 
 module.exports = router;
