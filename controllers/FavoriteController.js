@@ -1,4 +1,4 @@
-const {User} = require('../models');
+const {User, sequelize} = require('../models');
 const {Book }= require('../models');
 const {Favorite} = require('../models');
 
@@ -6,7 +6,7 @@ module.exports = {
  async index(req,res,next){
     const userId = req.params.id;
 
-    console.log(userId)
+    //console.log(userId)
 
     // const user = await User.findByPk(userId,{
     //   include:{
@@ -18,14 +18,25 @@ module.exports = {
     //   }
     // })
 
-    const user = await User.findByPk(userId)
-     console.log(user)
+    //const user = await Favorite.findAll({where:{userId: userId}});
 
-    
-    
-  // return res.json(user.books)
+     //console.log(user)
 
-    //res.render('favorites')
+     if(typeof userId != undefined){
+
+       let favorites = await sequelize.query(`SELECT users.name as user, books.title, books.description, books.price, favorites.id FROM users inner join favorites ON (favorites.userId = users.id and users.id = ${userId}) inner join books ON (favorites.bookId = books.id)`, {type: sequelize.QueryTypes.SELECT});
+        
+     
+      console.log(favorites)
+  
+    // return res.json(user.books)
+  
+      res.render('favorites',{user: req.session.user,favorites});
+
+     }else{
+       res.render('login');
+     }
+
   },
 
   async create(req,res,next){
@@ -40,8 +51,18 @@ module.exports = {
 
     if(typeof userId != undefined){
       await Favorite.create(favorite);
+      res.redirect('/');
     }
+  },
 
+  async delete(req,res,next){
+    let id = req.params.id
+    console.log(id)
 
+    let favorite = await Favorite.findByPk(id);
+
+    favorite.destroy();
+
+    res.redirect('/');
   }
 }
