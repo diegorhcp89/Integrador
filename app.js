@@ -7,7 +7,8 @@ const session = require('express-session');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var favoritesRouter = require('./routes/favorites')
+var favoritesRouter = require('./routes/favorites');
+var sectionsRouter = require('./routes/sections');//////////////
 
 var app = express();
 
@@ -29,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/products', indexRouter)
-app.use('/section', indexRouter)
+app.use('/section', sectionsRouter) ////////////
 app.use('/users', usersRouter);
 app.use('/cart', indexRouter);
 app.use('/payment', indexRouter);
