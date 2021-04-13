@@ -45,47 +45,20 @@
 
         <div class="container-fluid">
             <div class="row">
-              <div class="col-12 col-sm-6 col-md-3">
-                <a href="/section">
-                  <div>
-                    <img src="/images/geekbook.webp" class="box">
-                  </a>
-                    <h1>Geek</h1>
-                  </div>
-              </div>
 
-              <div class="col-12 col-sm-6 col-md-3">
-                <a href="/section">
-                  <div>
-                    <img src="/images/infantil.jpg" class="box">
+              <% themes.forEach(theme =>{%>
+                <div class="col-12 col-sm-6 col-md-3">
+                  <a href="/section/themes/<%= theme.id %> ">
+                      <img src="<%= theme.imgPaths %>" class="box">
+                      <h1> <%= theme.theme %>  </h1>
                   </a>
-                    <h1>Infantil</h1>
-                  </div>
-              </div>
+                </div>
 
+              <% }) %>
 
-              <div class="col-12 col-sm-6 col-md-3">
-                <a href="/section">
-                  <div>
-                    <img src="/images/romance.jpg" class="box">
-                  </a>
-                    <h1>Romance</h1>
-                  </div>
-                
-              </div>
-
-              <div class="col-12 col-sm-6 col-md-3">
-                <a href="/section">
-                  <div>
-                    <img src="/images/biografia.jpg" class="box">
-                  </a>
-                    <h1>Biografia</h1>
-                  </div>
-                
-              </div>
-              </div>
             </div>
         </div>
+
       </section>
 
       <section>
