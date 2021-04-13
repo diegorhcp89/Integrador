@@ -13,138 +13,57 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-product">
-                            <div class="product-thumb">
-                                <img src="/images/geekbook.webp" alt="">
-                            </div>
-                            <div class="product-title">
-                                <h3><a href="/products">Lorem ipsum</a></h3>
-                            </div>
-                            <div class="product-btns">
-                                <a href="#" class="btn-small mr-2">R$ 0.00</a>
-                                <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
-                                <a href="/favorites" class="btn-round"><i class="fa fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-product">
-                            <div class="product-thumb">
-                                <img src="/images/geekbook.webp" alt="">
-                            </div>
-                            <div class="product-title">
-                                <h3><a href="/products">Lorem ipsum</a></h3>
-                            </div>
-                            <div class="product-btns">
-                                <a href="/payment" class="btn-small mr-2">R$ 0.00</a>
-                                <a href="cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
-                                <a href="/favorites" class="btn-round"><i class="fa fa-heart"></i></a>
+                
+                    <% if(typeof themesAll != 'undefined'){
+                        books.forEach(book => {%>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-product">
+                                <div class="product-thumb">
+                                    <img src="<%= book.imgPath %> " alt="">
+                                </div>
+                                <div class="product-title">
+                                    <h3><a href="/products"><%= book.title %></a></h3>
+                                </div>
+                                <div class="product-btns">
+                                    <a href="#" class="btn-small mr-2"> <%= book.price %>  </a>
+                                    <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
+                                    <a href="/favorites/create/<%= book.id %>  " class="btn-round"><i class="fa fa-heart"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-product">
-                            <div class="product-thumb">
-                                <img src="/images/geekbook.webp" alt="">
-                            </div>
-                            <div class="product-title">
-                                <h3><a href="/products">Lorem ipsum</a></h3>
-                            </div>
-                            <div class="product-btns">
-                                <a href="/payment" class="btn-small mr-2">R$ 0.00</a>
-                                <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
-                                <a href="/favorites" class="btn-round"><i class="fa fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-product">
-                            <div class="product-thumb">
-                                <img src="/images/geekbook.webp" alt="">
-                            </div>
-                            <div class="product-title">
-                                <h3><a href="/products">Lorem ipsum</a></h3>
-                            </div>
-                            <div class="product-btns">
-                                <a href="/payment" class="btn-small mr-2">R$ 0.00</a>
-                                <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
-                                <a href="/favorites" class="btn-round"><i class="fa fa-heart"></i></a>
+                    <% })}%>
+                    
+                    <% if(typeof theme != 'undefined'){
+                        theme.forEach(item => {%>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-product">
+                                <div class="product-thumb">
+                                    <img src="<%= item.imgPath %> " alt="">
+                                </div>
+                                <div class="product-title">
+                                    <h3><a href="/products"><%= item.title %></a></h3>
+                                </div>
+                                <div class="product-btns">
+                                    <a href="#" class="btn-small mr-2"> <%= item.price %>  </a>
+                                    <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
+                                    <a href="/favorites/create/<%= item.id %>  " class="btn-round"><i class="fa fa-heart"></i></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-product">
-                            <div class="product-thumb">
-                                <img src="/images/geekbook.webp" alt="">
-                            </div>
-                            <div class="product-title">
-                                <h3><a href="/products">Lorem ipsum</a></h3>
-                            </div>
-                            <div class="product-btns">
-                                <a href="/payment" class="btn-small mr-2">R$ 0.00</a>
-                                <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
-                                <a href="/favorites" class="btn-round"><i class="fa fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-product">
-                            <div class="product-thumb">
-                                <img src="/images/geekbook.webp" alt="">
-                            </div>
-                            <div class="product-title">
-                                <h3><a href="/products">Lorem ipsum</a></h3>
-                            </div>
-                            <div class="product-btns">
-                                <a href="/payment" class="btn-small mr-2">R$ 0.00</a>
-                                <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
-                                <a href="/favorites" class="btn-round"><i class="fa fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-product">
-                            <div class="product-thumb">
-                                <img src="/images/geekbook.webp" alt="">
-                            </div>
-                            <div class="product-title">
-                                <h3><a href="/products">Lorem ipsum</a></h3>
-                            </div>
-                            <div class="product-btns">
-                                <a href="/payment" class="btn-small mr-2">R$ 0.00</a>
-                                <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
-                                <a href="/favorites" class="btn-round"><i class="fa fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
-                        <div class="single-product">
-                            <div class="product-thumb">
-                                <img src="/images/geekbook.webp" alt="">
-                            </div>
-                            <div class="product-title">
-                                <h3><a href="/products">Lorem ipsum</a></h3>
-                            </div>
-                            <div class="product-btns">
-                                <a href="/payment" class="btn-small mr-2">R$ 0.00</a>
-                                <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
-                                <a href="/favorites" class="btn-round"><i class="fa fa-heart"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    <% })}%>
+                   
                 </div>
 
-                <div class="row button-center">
+             <!--   <div class="row button-center">
                     <div class="col-xl-6 centered">
                         <a href="#" class="bttn-def"><span>Mostrar +</span></a>
                     </div>
                 </div>
-
+            -->
             </div>
         </section>
 
         <%- include('./partials/footer'); %>
-            </body>
+</body>
 
-            </html>
+</html>
