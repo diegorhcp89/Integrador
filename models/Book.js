@@ -38,6 +38,8 @@ module.exports = (sequelize,DataTypes)=>{
         foreignKey: 'userId', through: 'favorites',as: 'users'
       });
       Book.belongsTo(models.Theme,{foreignKey:'themeId'/* , as: 'theme' */})
+      Book.hasmany(models.Sale, {as: 'sales'})
   }
+  
   return Book;
 };
