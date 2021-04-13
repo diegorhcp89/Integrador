@@ -37,7 +37,7 @@ module.exports = (sequelize,DataTypes)=>{
       Book.belongsToMany(models.User,{
         foreignKey: 'userId', through: 'favorites',as: 'users'
       });
-      Book.belongsTo(models.Theme,{foreignKey:'themeId', as: 'theme'})
+      Book.belongsTo(models.Theme,{foreignKey:'themeId'/* , as: 'theme' */})
   }
   return Book;
 };
