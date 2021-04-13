@@ -24,9 +24,9 @@ module.exports = {
 
      if(typeof userId != undefined){
 
-       let favorites = await sequelize.query(`SELECT users.name as user, books.title, books.description, books.price, favorites.id FROM users inner join favorites ON (favorites.userId = users.id and users.id = ${userId}) inner join books ON (favorites.bookId = books.id)`, {type: sequelize.QueryTypes.SELECT});
+       let favorites = await sequelize.query(`SELECT users.name as user, books.title, books.description, books.price, books.imgPath, favorites.id FROM users inner join favorites ON (favorites.userId = users.id and users.id = ${userId}) inner join books ON (favorites.bookId = books.id)`, {type: sequelize.QueryTypes.SELECT});
         
-     
+
       console.log(favorites)
   
     // return res.json(user.books)
