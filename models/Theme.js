@@ -6,6 +6,10 @@ module.exports = (sequelize,DataTypes)=>{
       primaryKey: true,
       autoIncrement: true
     },
+    imgPaths:{
+      allowNull: false,
+      type: DataTypes.STRING
+    },
     theme:{  
       type: DataTypes.STRING,
       allowNull: false
