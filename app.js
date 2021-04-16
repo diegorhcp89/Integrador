@@ -9,6 +9,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var favoritesRouter = require('./routes/favorites');
 var sectionsRouter = require('./routes/sections');//////////////
+var productsRouter = require('./routes/products');//////
 
 var app = express();
 
@@ -29,12 +30,12 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/products', indexRouter)
-app.use('/section', sectionsRouter) ////////////
+app.use('/products', productsRouter);
+app.use('/section', sectionsRouter); ////////////
 app.use('/users', usersRouter);
 app.use('/cart', indexRouter);
 app.use('/payment', indexRouter);
-app.use('/concluded', indexRouter)
+app.use('/concluded', indexRouter);
 app.use('/favorites', favoritesRouter);
 
 // catch 404 and forward to error handler
