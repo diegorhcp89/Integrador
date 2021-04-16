@@ -16,9 +16,7 @@ router.get('/', async function(req, res, next) {
 });
 
 /* GET products page. */
-router.get('/products',function(req,res,next){
-  res.render('products',{user: req.session.user})
-});
+/* coloquei em products.js */
 
 /* coloquei em users.js */
 
