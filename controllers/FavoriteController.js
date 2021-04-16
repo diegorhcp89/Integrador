@@ -8,13 +8,17 @@ module.exports = {
 
     //console.log(userId)
 
-    // const user = await User.findByPk(userId,{
-    //   include:{
-    //     association: 'books',
-    //     attributes: ['title'],
-    //     through:{
-    //       attributes: []
-    //     }
+    // const favorites = await User.findByPk(userId,{
+    //   // include:{
+    //   //   association: 'books',
+    //   //   attributes: ['title'],
+    //   //   through:{
+    //   //     attributes: []
+    //   //   }
+    //   // },
+    //   include:'books',
+    //   exclude:{
+    //     attributes:['createdAt', 'updatedAt']
     //   }
     // })
 
@@ -24,7 +28,7 @@ module.exports = {
 
      if(typeof userId != undefined){
 
-       let favorites = await sequelize.query(`SELECT users.name as user, books.title, books.description, books.price, books.imgPath, favorites.id FROM users inner join favorites ON (favorites.userId = users.id and users.id = ${userId}) inner join books ON (favorites.bookId = books.id)`, {type: sequelize.QueryTypes.SELECT});
+       let favorites = await sequelize.query(`SELECT users.name as user, books.title, books.description, books.price, books.imgPath, favorites.id, favorites.bookId FROM users inner join favorites ON (favorites.userId = users.id and users.id = ${userId}) inner join books ON (favorites.bookId = books.id)`, {type: sequelize.QueryTypes.SELECT});
         
 
       console.log(favorites)
@@ -33,8 +37,6 @@ module.exports = {
   
       res.render('favorites',{user: req.session.user,favorites});
 
-     }else{
-       res.render('login');
      }
 
   },
