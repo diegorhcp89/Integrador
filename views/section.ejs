@@ -22,7 +22,7 @@
                                     <img src="<%= book.imgPath %> " alt="">
                                 </div>
                                 <div class="product-title">
-                                    <h3><a href="/products"><%= book.title %></a></h3>
+                                    <h3><a href="/products/book/<%= book.id %>"><%= book.title %></a></h3>
                                 </div>
                                 <div class="product-btns">
                                     <a href="#" class="btn-small mr-2"> <%= book.price %>  </a>
@@ -41,7 +41,7 @@
                                     <img src="<%= item.imgPath %> " alt="">
                                 </div>
                                 <div class="product-title">
-                                    <h3><a href="/products"><%= item.title %></a></h3>
+                                    <h3><a href="/products/book/<%= item.id %>"><%= item.title %></a></h3>
                                 </div>
                                 <div class="product-btns">
                                     <a href="#" class="btn-small mr-2"> <%= item.price %>  </a>
