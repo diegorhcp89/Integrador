@@ -10,7 +10,7 @@ module.exports = (sequelize,DataTypes)=>{
       type: DataTypes.DECIMAL,
       allowNull: false
     }, 
-    book_id:{
+    bookId:{
       type: DataTypes.INTEGER,
       allowNull: false
     }
