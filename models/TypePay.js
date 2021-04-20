@@ -1,17 +1,17 @@
 module.exports = (sequelize,DataTypes)=>{
     const TypePay = sequelize.define('TypePay',{
         id:{
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
           },
           cardId:{
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: true,
           },
           ticketId:{
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: true,
           }
     });
