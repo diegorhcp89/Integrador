@@ -27,6 +27,8 @@ module.exports = (sequelize,DataTypes)=>{
       type: DataTypes.STRING,
     },
     infoEmail: DataTypes.STRING,
+    createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE
   },{
     tableName: 'users'
   });
