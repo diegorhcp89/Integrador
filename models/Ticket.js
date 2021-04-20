@@ -1,13 +1,13 @@
 module.exports = (sequelize,DataTypes)=>{
     const Ticket = sequelize.define('Ticket',{
         id:{
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
             autoIncrement: true
           },
           userId:{
-            type: Sequelize.INTEGER,
+            type: DataTypes.INTEGER,
             allowNull: false,
             references: {model:'users',key:'id'},
             onUpdate: 'CASCADE',
@@ -16,8 +16,9 @@ module.exports = (sequelize,DataTypes)=>{
     },{
         tableName: 'Ticket'
     });
+    
     Ticket.associate = (models) => {
-        Ticket.belongsTo(models.card, {as: 'cards'})
+        Ticket.belongsTo(models.Card, {as: 'cards'})
       }
 
       return Ticket;
