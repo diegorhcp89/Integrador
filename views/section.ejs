@@ -51,6 +51,25 @@
                             </div>
                         </div>
                     <% })}%>
+
+                    <% if(typeof search != 'undefined'){
+                        books.forEach(item => {%>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                            <div class="single-product">
+                                <div class="product-thumb">
+                                    <img src="<%= item.imgPath %> " alt="">
+                                </div>
+                                <div class="product-title">
+                                    <h3><a href="/products/book/<%= item.id %>"><%= item.title %></a></h3>
+                                </div>
+                                <div class="product-btns">
+                                    <a href="#" class="btn-small mr-2"> <%= item.price %>  </a>
+                                    <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
+                                    <a href="/favorites/create/<%= item.id %>  " class="btn-round"><i class="fa fa-heart"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    <% })}%>
                    
                 </div>
 
