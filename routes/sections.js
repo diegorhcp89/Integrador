@@ -7,4 +7,6 @@ router.get('/produtos', SectionController.produtos);
 
 router.get('/themes/:id', SectionController.theme);
 
+router.get('/search', SectionController.search);
+
 module.exports = router;
