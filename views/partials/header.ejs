@@ -16,8 +16,11 @@
                   <a class="nav-link" href="/section/produtos">Produtos</a>
               </li>
              
-              <form class="d-flex flex-grow-1 navbar-search">
-                <input class="form-control navbar-search-input" type="search" placeholder="Pesquisar" aria-label="Search">
+              <form action="/section/search" method="GET" class="d-flex flex-grow-1 navbar-search">
+                <input class="form-control navbar-search-input" type="text"
+                name="word"
+                placeholder="Pesquisar" aria-label="Search"   
+                >
                 <button class="btn btn-outline-success navbar-search-button" type="submit"><i class="fas fa-search "></i></button>
               </form>
              
