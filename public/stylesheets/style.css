@@ -530,6 +530,11 @@ label span {
   min-width: 0;
 }
 
+.single-product:hover{
+  transform: scale(1.02);
+  transition: all ease 0.3s;
+}
+
 .single-product .product-thumb {
   margin-bottom: 20px;
 }
