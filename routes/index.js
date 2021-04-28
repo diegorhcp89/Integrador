@@ -1,18 +1,32 @@
 var express = require('express');
 var router = express.Router();
 
-const promotions = require('../data/promotions')
 const most = require('../data/most')
 
 const {Theme} = require('../models');
+const {Sale} = require('../models');
+const {Book} = require('../models');
+
 
 /* GET home page. */
 router.get('/', async function(req, res, next) {
   let themes = await Theme.findAll();
 
-  console.log(themes);
+  let sales = await Book.findAll({
+    attributes: ['title','imgPath','description','price','id'],
+    include:[
+      {
+        model: Sale,
+        required: true,
+        attributes: ['percent']
+      }
+    ]
+  });
 
-  res.render('index',{promotions: promotions, most:most, user: req.session.user, themes});
+  //console.log(sales);
+
+
+  res.render('index',{most:most, user: req.session.user, themes,sales});
 });
 
 /* GET products page. */
