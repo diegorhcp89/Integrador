@@ -17,8 +17,9 @@ module.exports = (sequelize,DataTypes)=>{
   },{
     tableName: 'sales'
   });
+  
   Sale.associate = (models) => {
-    Sale.belongsTo(models.Book, {as: 'book'})
+    Sale.belongsTo(models.Book,{foreignKey:'bookId'});
   }
 
   return Sale;
