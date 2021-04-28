@@ -14,7 +14,7 @@ module.exports = {
         type: Sequelize.DECIMAL,
         allowNull: false
       },
-      book_id:{
+      bookId:{
         type: Sequelize.INTEGER,
         allowNull: false,
         references:{
