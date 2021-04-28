@@ -27,7 +27,13 @@
                                 <div class="product-btns">
                                     <a href="#" class="btn-small mr-2"> <%= book.price %>  </a>
                                     <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
+                                    
+                                    <% if(typeof user != 'undefined'){%>
+
                                     <a href="/favorites/create/<%= book.id %>  " class="btn-round"><i class="fa fa-heart"></i></a>
+                                    <%}else{%>
+                                        <a href="/users/login" class="btn-round"><i class="fa fa-heart"></i></a>
+                                    <%}%>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +52,12 @@
                                 <div class="product-btns">
                                     <a href="#" class="btn-small mr-2"> <%= item.price %>  </a>
                                     <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
+
+                                    <% if(typeof user != 'undefined'){%>
                                     <a href="/favorites/create/<%= item.id %>  " class="btn-round"><i class="fa fa-heart"></i></a>
+                                    <%}else{%>
+                                        <a href="/users/login" class="btn-round"><i class="fa fa-heart"></i></a>
+                                    <%}%>
                                 </div>
                             </div>
                         </div>
@@ -65,7 +76,11 @@
                                 <div class="product-btns">
                                     <a href="#" class="btn-small mr-2"> <%= item.price %>  </a>
                                     <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
+                                    <% if(typeof user != 'undefined'){%>
                                     <a href="/favorites/create/<%= item.id %>  " class="btn-round"><i class="fa fa-heart"></i></a>
+                                    <%}else{%>
+                                        <a href="/users/login" class="btn-round"><i class="fa fa-heart"></i></a>
+                                    <%}%>
                                 </div>
                             </div>
                         </div>
