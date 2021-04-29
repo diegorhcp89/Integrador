@@ -109,15 +109,30 @@
             
               <div class="row">
 
-                <% most.forEach(most =>{ %> 
-                <div class="col-12 col-sm-6 col-md-3">
-                  <a href="/products">
-                      <img src="<%= most.caminho_imagem %> " class="box">
-                      <h2>R$ <%= most.preco %> </h2>
-                  </a>
+                <% 
+                mosts.forEach(book => {%>
+                <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-product">
+                        <div class="product-thumb">
+                            <img src="<%= book.imgPath %> " alt="">
+                        </div>
+                        <div class="product-title">
+                            <h3><a href="/products/book/<%= book.id %>"><%= book.title %></a></h3>
+                        </div>
+                        <div class="product-btns">
+                            <a href="#" class="btn-small mr-2"> <%= book.price %>  </a>
+                            <a href="/cart" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
+                            
+                            <% if(typeof user != 'undefined'){%>
+
+                            <a href="/favorites/create/<%= book.id %>  " class="btn-round"><i class="fa fa-heart"></i></a>
+                            <%}else{%>
+                                <a href="/users/login" class="btn-round"><i class="fa fa-heart"></i></a>
+                            <%}%>
+                        </div>
+                    </div>
                 </div>
-  
-                <% }) %> 
+            <% })%>
   
               </div>
         </div>

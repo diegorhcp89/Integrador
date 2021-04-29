@@ -25,7 +25,11 @@ module.exports = (sequelize,DataTypes)=>{
     themeId:{
       type: DataTypes.INTEGER,
       allowNull: false
-    }
+    },
+    most:{
+      type: DataTypes.BOOLEAN,
+      defaultValue: false,
+    },
   },{
     tableName: 'books'
   });

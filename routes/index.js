@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const most = require('../data/most')
+//const most = require('../data/most')
 
 const {Theme} = require('../models');
 const {Sale} = require('../models');
@@ -23,10 +23,17 @@ router.get('/', async function(req, res, next) {
     ]
   });
 
-  //console.log(sales);
+  let mosts = await Book.findAll({
+    attributes: ['title','imgPath','description','price','id'],
+    where: {
+      most: 1
+    }
+  })
+
+ //console.log(mosts);
 
 
-  res.render('index',{most:most, user: req.session.user, themes,sales});
+  res.render('index',{ user: req.session.user, themes,sales,mosts});
 });
 
 /* GET products page. */
