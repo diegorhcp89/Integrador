@@ -15,7 +15,13 @@
                         <div class="product-btns">
                             <a href="#" class="btn-small mr-2">R$ <%= product.price %> </a>
                             <a href="#" class="btn-round mr-2"><i class="fa fa-shopping-cart"></i></a>
-                            <a href="/favorites/create/<%= product.id %> " class="btn-round"><i class="fa fa-heart"></i></a>
+
+                            <% if(typeof user != 'undefined'){%>
+
+                                <a href="/favorites/create/<%= book.id %>  " class="btn-round"><i class="fa fa-heart"></i></a>
+                                <%}else{%>
+                                    <a href="/users/login" class="btn-round"><i class="fa fa-heart"></i></a>
+                            <%}%>
                         </div>
                     </div>
                 </div>
@@ -24,11 +30,11 @@
                         <h4>Descrição:</h4>
                         <p> <%= product.description %>  </p>
                         </div>
-                        <div class="single-product">
+                        <!-- <div class="single-product">
                             <div class="navbutton">
                                 <button type="button" class="btn btn-primary">Calcular Rota</button>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
         </section>
